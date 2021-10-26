@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#btnSubmit, #btnBack {
+    height: 30px;
+    position: relative;
+    color: darkblue;
+    border: 2px solid midnightblue;
+    border-radius: 4px;
+}
+
+input[type=text] {
+    width: 16%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.errorMessage {
+    color: Red;
+}
