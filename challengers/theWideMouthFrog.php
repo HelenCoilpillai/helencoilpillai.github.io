@@ -31,7 +31,7 @@ if (isset($_POST['btnSubmit'])) {
         The Wide Mouth Frog
     </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -58,7 +58,7 @@ if (isset($_POST['btnSubmit'])) {
         <input id="textInputAnimal" name="animal" type="text">
         <br>
         <button id="btnBack" name="btnBack">
-            <a href="../index.html">
+            <a href="../index.php">
                 Back
             </a>
         </button>
