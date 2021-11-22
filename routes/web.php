@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TheWideMouthFrogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/template', function () {
+    return view('layout/app');
+});
+
+Route::get('/theWideMouthFrog', function () {
+    return view('challengers/theWideMouthFrog');
+});
+
+Route::post('/theWideMouthFrog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
+    ->name('theWideMouthFrogService-form-submit');
+
+
