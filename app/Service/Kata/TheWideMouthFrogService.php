@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\kata;
+namespace App\Service\Kata;
 
 class TheWideMouthFrogService
 {
