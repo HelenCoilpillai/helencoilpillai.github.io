@@ -25,7 +25,7 @@
                     <a target="_blank" href="https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89">Kata 8</a>
                 </td>
                 <td id="colButtons">
-                    <a target="_blank"
+                    <a
                        href="/wide-mouth-frog"
                        class="btn btn-primary btn-sm" id="btnTry">
                         Try!
