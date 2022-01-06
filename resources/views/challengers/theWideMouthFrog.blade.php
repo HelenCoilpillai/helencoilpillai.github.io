@@ -11,7 +11,7 @@
 @section('body')
     @component('layout.components.form')
         @slot('action')
-            {{route('theWideMouthFrogService-form-submit')}}
+            {{route('wide-mouth-frog-form-submit')}}
         @endslot
         @slot('formId')
             theWideMouthFrogForm

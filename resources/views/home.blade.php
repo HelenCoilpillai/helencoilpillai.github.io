@@ -26,7 +26,7 @@
                 </td>
                 <td id="colButtons">
                     <a target="_blank"
-                       href="/theWideMouthFrog"
+                       href="/wide-mouth-frog"
                        class="btn btn-primary btn-sm" id="btnTry">
                         Try!
                     </a>

@@ -21,11 +21,11 @@ Route::get('/template', function () {
     return view('layout/app');
 });
 
-Route::get('/theWideMouthFrog', function () {
+Route::get('/wide-mouth-frog', function () {
     return view('challengers/theWideMouthFrog');
 });
 
-Route::post('/theWideMouthFrog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
-    ->name('theWideMouthFrogService-form-submit');
+Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
+    ->name('wide-mouth-frog-form-submit');
 
 
