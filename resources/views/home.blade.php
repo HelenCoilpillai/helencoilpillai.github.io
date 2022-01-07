@@ -8,6 +8,7 @@
     Course work
 @endsection
 
+
 @section('body')
     @component('layout.components.table')
         @slot('tableId')
