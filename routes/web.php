@@ -25,7 +25,7 @@ Route::get('/wide-mouth-frog', function () {
     return view('challengers/theWideMouthFrog');
 });
 
-Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
+Route::post('/wide-mouth-frog/submit', 'App\Https\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
     ->name('wide-mouth-frog-form-submit');
 
 
