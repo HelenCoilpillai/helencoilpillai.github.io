@@ -13,6 +13,11 @@ class TheWideMouthFrogController extends Controller
 
         $animalName = $request->input('animal');
         $mouthSize = $wideMouthFrogService->getMouthSize($animalName);
-        return redirect(null, 302, [],true)->back()->with('message', "The {$animalName}'s mouth is {$mouthSize}!");
+        return redirect()->back()->with('message', "The {$animalName}'s mouth is {$mouthSize}!");
+
+//        return response()->json([
+//            "message" => "The {$animalName}'s mouth is {$mouthSize}!"
+//        ], 200);
+
     }
 }
