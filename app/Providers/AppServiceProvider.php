@@ -24,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceScheme('https');
+        $appURl = url('/');
+        if (str_contains($appURl, 'https')) {
+            URL::forceScheme('https');
+        }
     }
 }
