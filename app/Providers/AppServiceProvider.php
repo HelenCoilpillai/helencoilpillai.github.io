@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $appURl = parse_url(url('/'));
-        if($appURl['host'] == 'herokuapp') {
+        if($appURl['host'] == 'portfolio2021.herokuapp.com') {
             URL::forceScheme('https');
         }
     }
