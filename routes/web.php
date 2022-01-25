@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TheWideMouthFrogController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,15 +18,26 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/template', function () {
-    return view('layout/app');
+Route::get('/my-work', function () {
+    return view('overviews/generalOverview');
+});
+
+Route::get('/kata8', function () {
+    return view('overviews/kata8Overview');
 });
 
 Route::get('/wide-mouth-frog', function () {
-    return view('challengers/theWideMouthFrog');
+    return view('../challengers/theWideMouthFrog');
 });
 
 Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
     ->name('wide-mouth-frog-form-submit');
+
+Route::get('/calculate-the-mean', function () {
+    return view('../challengers/meanOfAnArray');
+});
+
+Route::post('/calculate-the-mean/submit', 'App\Http\Controllers\MeanOfAnArrayController@meanOfAnArrayFormSubmit')
+    ->name('calculate-the-mean-form-submit');
 
 
