@@ -1,20 +1,20 @@
 @extends('.layout.app')
 
 @section('title')
-    The Wide Mouth Frog
+    The mean of an array
 @endsection
 
 @section('headerTitle')
-    The Wide Mouth Frog
+    The mean of an array
 @endsection
 
 @section('body')
     @component('layout.components.form')
         @slot('action')
-            {{route('wide-mouth-frog-form-submit')}}
+            {{route('calculate-the-mean-form-submit')}}
         @endslot
         @slot('formId')
-            wideMouthFrogForm
+            meanOfArrayForm
         @endslot
 
         @slot('formContent')
@@ -24,21 +24,22 @@
                         col-md-3
                     @endslot
                     @slot('label')
-                        Animal:
+                        Marks:
                     @endslot
                     @slot('class')
                     @endslot
                     @slot('id')
-                        textInputAnimal
+                        textInputMarks
                     @endslot
                     @slot('name')
-                        animal
+                        marks
                     @endslot
                     @slot('type')
                         text
                     @endslot
                 @endcomponent
             </div>
+            <div><small>*Enter your marks in comma separated format</small></div>
             <br>
 
             <div class="row nav-row">
@@ -50,7 +51,7 @@
                         col-md-1 btnBack btn btn-outline-secondary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnBackWideMouthFrog
+                        btnBackMeanOfAnArray
                     @endslot
                     @slot('buttonContent')
                         <a class="stretched-link" href="../kata8">
@@ -67,7 +68,7 @@
                         col-md-1  btn btn-primary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnSubmitAnimal
+                        btnSubmitMarks
                     @endslot
                     @slot('buttonContent')
                         Submit
