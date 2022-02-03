@@ -4,9 +4,9 @@ namespace App\Service\Kata;
 
 class ReverseWordService
 {
-    public function reverseWords($reverseWordsTextInput)
+    public function reverseWords($textToBeReversed)
     {
-        $reverseWordsTextArray = array_reverse(explode(' ', $reverseWordsTextInput));
+        $reverseWordsTextArray = array_reverse(explode(' ', $textToBeReversed));
         return implode(' ', $reverseWordsTextArray);
     }
 }

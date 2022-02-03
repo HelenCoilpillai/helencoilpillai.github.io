@@ -32,7 +32,7 @@ class ReverseWordRequest extends FormRequest
     {
         return [
             'reverseWordsText.required' => "The 'Reverse Words Text' field is required",
-            'reverseWordsText.max' => "The 'Reverse Words Text' must not be greater than 10 characters"
+            'reverseWordsText.max' => "The 'Reverse Words Text' must not be greater than 50 characters"
         ];
     }
 }
