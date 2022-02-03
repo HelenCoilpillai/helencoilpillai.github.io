@@ -14,7 +14,6 @@ class ReverseWordsController extends Controller
      */
     protected $reverseWordService;
 
-
     public function __construct(ReverseWordService $reverseWordService)
     {
         $this->reverseWordService = $reverseWordService;
