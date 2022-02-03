@@ -40,4 +40,11 @@ Route::get('/calculate-the-mean', function () {
 Route::post('/calculate-the-mean/submit', 'App\Http\Controllers\MeanOfAnArrayController@meanOfAnArrayFormSubmit')
     ->name('calculate-the-mean-form-submit');
 
+Route::get('/reverse-words', function () {
+    return view('../challengers/reverseWords');
+});
+
+Route::post('/reverse-words/submit', 'App\Http\Controllers\ReverseWordsController@reverseWordsFormSubmit')
+    ->name('reverse-words-form-submit');
+
 
