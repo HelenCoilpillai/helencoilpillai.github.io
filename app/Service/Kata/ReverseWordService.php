@@ -4,7 +4,11 @@ namespace App\Service\Kata;
 
 class ReverseWordService
 {
-    public function reverseWords($textToBeReversed)
+    /**
+     * @param string $textToBeReversed
+     * @return string
+     */
+    public function reverseWords(string $textToBeReversed): string
     {
         $reverseWordsTextArray = array_reverse(explode(' ', $textToBeReversed));
         return implode(' ', $reverseWordsTextArray);
