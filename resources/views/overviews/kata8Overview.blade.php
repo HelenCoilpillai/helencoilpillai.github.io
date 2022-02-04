@@ -63,6 +63,26 @@
                         </a>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.codewars.com/kata/51c8991dee245d7ddf00000e">
+                            Reverse Words
+                        </a>
+                    </td>
+                    <td id="colButtons">
+                        <a href="/reverse-words"
+                           class="btn btn-primary btn-sm btnTry">
+                            Try!
+                        </a>
+                        <a target="_blank"
+                           href="https://www.codewars.com/kata/reviews/5d059e6b5324de00013bb3b4/groups/60ffaf5cf193a00001349272"
+                           class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
+                            Answer
+                        </a>
+                    </td>
+                </tr>
+
             @endslot
         @endcomponent
     </div>
