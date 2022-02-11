@@ -47,4 +47,12 @@ Route::get('/reverse-words', function () {
 Route::post('/reverse-words/submit', 'App\Http\Controllers\ReverseWordsController@reverseWordsFormSubmit')
     ->name('reverse-words-form-submit');
 
+Route::get('/remove-first-and-last-character', function () {
+    return view('../challengers/removeFirstAndLastCharacter');
+});
+
+Route::post('/remove-first-and-last-character/submit',
+    'App\Http\Controllers\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
+    ->name('remove-first-and-last-character-form-submit');
+
 

@@ -10,10 +10,13 @@ class ReverseWordsController extends Controller
 {
 
     /**
-     * @var ReversewordService
+     * @var
      */
     protected $reverseWordService;
 
+    /**
+     * @param ReverseWordService $reverseWordService
+     */
     public function __construct(ReverseWordService $reverseWordService)
     {
         $this->reverseWordService = $reverseWordService;
