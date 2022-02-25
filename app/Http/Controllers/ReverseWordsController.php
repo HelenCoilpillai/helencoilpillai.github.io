@@ -10,9 +10,9 @@ class ReverseWordsController extends Controller
 {
 
     /**
-     * @var
+     * @var ReverseWordService
      */
-    protected $reverseWordService;
+    protected ReverseWordService $reverseWordService;
 
     /**
      * @param ReverseWordService $reverseWordService

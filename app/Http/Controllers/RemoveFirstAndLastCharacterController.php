@@ -6,12 +6,14 @@ use App\Http\Requests\RemoveFirstAndLastCharacterRequest;
 use App\Service\Kata\RemoveFirstAndLastCharacterService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
-use Illuminate\Support\Facades\Redirect;
 
 class RemoveFirstAndLastCharacterController extends Controller
 {
 
-    protected $removeFirstAndLastCharacterService;
+    /**
+     * @var RemoveFirstAndLastCharacterService
+     */
+    protected RemoveFirstAndLastCharacterService $removeFirstAndLastCharacterService;
 
     /**
      * @param RemoveFirstAndLastCharacterService $removeFirstAndLastCharacterService
