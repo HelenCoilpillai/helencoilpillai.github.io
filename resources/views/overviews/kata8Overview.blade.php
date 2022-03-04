@@ -83,6 +83,25 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0">
+                            Remove First and Last Character
+                        </a>
+                    </td>
+                    <td id="colButtons">
+                        <a href="/remove-first-and-last-character"
+                           class="btn btn-primary btn-sm btnTry">
+                            Try!
+                        </a>
+                        <a target="_blank"
+                           href="https://www.codewars.com/kata/reviews/58318b6497244166be00007d/groups/60ffaec4f193a0000134925b"
+                           class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
+                            Answer
+                        </a>
+                    </td>
+                </tr>
+
             @endslot
         @endcomponent
     </div>
