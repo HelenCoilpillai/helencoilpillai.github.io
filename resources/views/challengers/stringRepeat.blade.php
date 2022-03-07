@@ -72,7 +72,6 @@
                     @slot('value')
                         {{ old('repeatTimes', isset($name->repeatTimes) ?? '') }}
                     @endslot
-
                 @endcomponent
             </div>
 
