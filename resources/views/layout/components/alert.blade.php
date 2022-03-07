@@ -13,3 +13,9 @@
         {{ session()->get('message') }}
     </div>
 @endif
+
+@if(session()->has('specialMessage'))
+    <div class="alert alert-success">
+        {!! Session::get('specialMessage') !!}
+    </div>
+@endif
