@@ -55,4 +55,12 @@ Route::post('/remove-first-and-last-character/submit',
     'App\Http\Controllers\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
     ->name('remove-first-and-last-character-form-submit');
 
+Route::get('/string-repeat', function () {
+    return view('../challengers/stringRepeat');
+});
+
+Route::post('/string-repeat/submit',
+    'App\Http\Controllers\StringRepeatController@stringRepeatFormSubmit')
+    ->name('string-repeat-form-submit');
+
 

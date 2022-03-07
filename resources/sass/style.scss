@@ -1,0 +1,5 @@
+//asterisk indication on required form fields
+.form-group.required .control-label:after {
+    content:"*";
+    color:red;
+}
