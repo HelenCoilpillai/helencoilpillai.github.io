@@ -15,6 +15,7 @@ use App\Http\Controllers\RemoveFirstAndLastCharacterController;
 use App\Http\Requests\RemoveFirstAndLastCharacterRequest;
 use App\Service\Kata\RemoveFirstAndLastCharacterService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
@@ -24,7 +25,8 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
     private $removeFirstAndLastCharacterControllerMock;
     private $removeFirstAndLastCharacterServiceMock;
     private $removeFirstAndLastCharacterRequestMock;
-    private $redirectMock;
+    private $redirectResponseMock;
+    private $redirectorMock;
 
     public function setUp(): void
     {
@@ -35,9 +37,11 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
             ->makePartial()
             ->shouldAllowMockingProtectedMethods();
 
-        $this->redirectMock = Mockery::mock(RedirectResponse::class);
+        $this->redirectResponseMock = Mockery::mock(RedirectResponse::class);
 
         $this->removeFirstAndLastCharacterServiceMock = Mockery::mock(RemoveFirstAndLastCharacterService::class);
+
+        $this->redirectorMock = Mockery::mock(Redirector::class);
 
     }
 
@@ -73,23 +77,20 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
         $this->removeFirstAndLastCharacterControllerMock->shouldReceive("getRedirectObject")
             ->once()
             ->withNoArgs()
-            ->andReturn($this->redirectMock);
+            ->andReturn($this->redirectorMock);
 
-        $this->redirectMock->shouldReceive("back")
+        $this->redirectorMock->shouldReceive("back")
             ->once()
             ->withNoArgs()
-            ->andReturnSelf();
+            ->andReturn($this->redirectResponseMock);
 
-        $this->redirectMock->shouldReceive("with")
+        $this->redirectResponseMock->shouldReceive("with")
             ->once()
             ->withArgs(["message", "The first & last characters have been removed: {$modifiedString}"])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectMock,
+        $this->assertSame($this->redirectResponseMock,
             $this->removeFirstAndLastCharacterControllerMock
                 ->removeFirstAndLastCharacterFormSubmit($this->removeFirstAndLastCharacterRequestMock));
     }
 }
-
-
-

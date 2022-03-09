@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StringRepeatRequest;
 use App\Service\Kata\StringRepeatService;
+use Illuminate\Routing\Redirector;
 
 class StringRepeatController extends Controller
 {
@@ -18,9 +19,7 @@ class StringRepeatController extends Controller
      */
     public function __construct(StringRepeatService $stringRepeatService)
     {
-
         $this->stringRepeatService = $stringRepeatService;
-
     }
 
     /**
@@ -35,9 +34,17 @@ class StringRepeatController extends Controller
         $repeatedString = $this->stringRepeatService->repeatString($textToRepeat, $repeatTimes);
         $formattedRepeatedString = "Repeated text:" . wordwrap($repeatedString, 100, "<br>", true);
 
-        return redirect()
+        return $this->getRedirectObject()
             ->back()
             ->with("specialMessage", $formattedRepeatedString);
 
+    }
+
+    /**
+     * @return Redirector
+     */
+    protected function getRedirectObject(): Redirector
+    {
+        return redirect();
     }
 }
