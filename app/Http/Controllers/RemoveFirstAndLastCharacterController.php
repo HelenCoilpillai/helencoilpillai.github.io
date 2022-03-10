@@ -39,6 +39,7 @@ class RemoveFirstAndLastCharacterController extends Controller
     }
 
     /**
+     * @codeCoverageIgnore
      * @return Redirector
      */
     protected function getRedirectObject(): Redirector

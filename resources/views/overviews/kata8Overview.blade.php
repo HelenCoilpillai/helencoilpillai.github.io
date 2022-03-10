@@ -102,6 +102,25 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.codewars.com/kata/57a0e5c372292dd76d000d7e">
+                            String Repeat
+                        </a>
+                    </td>
+                    <td id="colButtons">
+                        <a href="/string-repeat"
+                           class="btn btn-primary btn-sm btnTry">
+                            Try!
+                        </a>
+                        <a target="_blank"
+                           href="https://www.codewars.com/kata/reviews/57f7d8dd3f69fed0ed00000c/groups/57f7d8dd3f69fed0ed000010"
+                           class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
+                            Answer
+                        </a>
+                    </td>
+                </tr>
+
             @endslot
         @endcomponent
     </div>
