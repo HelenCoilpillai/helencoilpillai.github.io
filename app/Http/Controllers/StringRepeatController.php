@@ -32,7 +32,7 @@ class StringRepeatController extends Controller
         $repeatTimes = $request->input('repeatTimes');
 
         $repeatedString = $this->stringRepeatService->repeatString($textToRepeat, $repeatTimes);
-        $formattedRepeatedString = "Repeated text:" . wordwrap($repeatedString, 100, "<br>", true);
+        $formattedRepeatedString = "Repeated text: " . wordwrap($repeatedString, 100, "<br>", true);
 
         return $this->getRedirectObject()
             ->back()
