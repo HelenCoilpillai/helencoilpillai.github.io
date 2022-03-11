@@ -32,7 +32,7 @@ class ReverseWordsController extends Controller
         $textToBeReversed = $request->input('reverseWordsText');
         $reversedText = $this->reverseWordService->reverseWords($textToBeReversed);
 
-        return $this->getReidrectObject()
+        return $this->getRedirectObject()
             ->back()
             ->with('message', "This is the reversed text: {$reversedText}");
     }
@@ -41,7 +41,7 @@ class ReverseWordsController extends Controller
      * @codeCoverageIgnore
      * @return \Illuminate\Contracts\Foundation\Application|RedirectResponse|\Illuminate\Routing\Redirector
      */
-    protected function getReidrectObject(): Redirector
+    protected function getRedirectObject(): Redirector
     {
         return redirect();
     }
