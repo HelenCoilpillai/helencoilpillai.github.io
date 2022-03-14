@@ -17,7 +17,7 @@
     </div>
 
     <div>
-        @component('layout.components.table')
+        @component('layout.kata8.table')
             @slot('tableId')
                 courseWork
             @endslot

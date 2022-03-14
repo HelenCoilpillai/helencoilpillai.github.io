@@ -11,7 +11,7 @@
 
 namespace tests\Unit\ServiceTest;
 
-use App\Service\Kata\StringRepeatService;
+use App\Service\Kata8\StringRepeatService;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
@@ -34,7 +34,7 @@ class StringRepeatServiceTest extends TestCase
     }
 
     /**
-     * @covers \App\Service\Kata\StringRepeatService::repeatString
+     * @covers \App\Service\Kata8\StringRepeatService::repeatString
      */
     public function testRepeatStringReturnsTheRepeatedStringValue()
     {

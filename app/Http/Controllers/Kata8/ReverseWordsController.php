@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Kata8;
 
-use App\Http\Requests\ReverseWordRequest;
-use App\Service\Kata\ReverseWordService;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Kata8\ReverseWordRequest;
+use App\Service\Kata8\ReverseWordService;
 use Illuminate\Http\RedirectResponse;
+use function redirect;
 
 class ReverseWordsController extends Controller
 {

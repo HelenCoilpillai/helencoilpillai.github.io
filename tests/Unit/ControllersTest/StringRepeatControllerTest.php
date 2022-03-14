@@ -9,11 +9,11 @@
  *
  */
 
-namespace tests\Unit\ControllerTest;
+namespace tests\Unit\ControllerTest\Kata8;
 
-use App\Http\Controllers\StringRepeatController;
-use App\Http\Requests\StringRepeatRequest;
-use App\Service\Kata\StringRepeatService;
+use App\Http\Controllers\Kata8\StringRepeatController;
+use App\Http\Requests\Kata8\StringRepeatRequest;
+use App\Service\Kata8\StringRepeatService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Mockery;
@@ -62,7 +62,7 @@ class StringRepeatControllerTest extends TestCase
         $textToRepeat = "string repeat kata";
         $repeatTimes = 7;
         $repeatedText = "string repeat katastring repeat katastring repeat katastring repeat katastring repeat katastring repeat katastring repeat kata";
-        $formattedRepeatedString = "Repeated text:string repeat katastring repeat katastring repeat katastring repeat katastring repeat katastring<br>repeat katastring repeat kata";
+        $formattedRepeatedString = "Repeated text: string repeat katastring repeat katastring repeat katastring repeat katastring repeat katastring<br>repeat katastring repeat kata";
 
 
         $this->stringRepeatRequestMock->shouldReceive('input')

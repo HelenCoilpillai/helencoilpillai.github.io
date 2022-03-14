@@ -9,7 +9,7 @@
 @endsection
 
 @section('body')
-    @component('layout.components.form')
+    @component('layout.kata8.form')
         @slot('action')
             {{route('string-repeat-form-submit')}}
         @endslot
@@ -19,7 +19,7 @@
 
         @slot('formContent')
             <div class="row">
-                @component('layout.components.inputField')
+                @component('layout.kata8.inputField')
                     @slot('divClass')
                         col-md-3 form-group required
                     @endslot
@@ -47,7 +47,7 @@
             <br>
 
             <div class="row">
-                @component('layout.components.inputField')
+                @component('layout.kata8.inputField')
                     @slot('divClass')
                         col-md-2 form-group required
                     @endslot
@@ -78,7 +78,7 @@
             <br>
 
             <div class="row">
-                @component('layout.components.button')
+                @component('layout.kata8.button')
                     @slot('buttonType')
                         button
                     @endslot
@@ -95,7 +95,7 @@
                     @endslot
                 @endcomponent
 
-                @component('layout.components.button')
+                @component('layout.kata8.button')
                     @slot('buttonType')
                         submit
                     @endslot

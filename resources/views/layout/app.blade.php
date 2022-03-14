@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('layout.components.head')
+    @include('layout.kata8.head')
 </head>
 
 <body>
-@include('layout.components.body')
-@include('layout.components.footer')
+@include('layout.kata8.body')
+@include('layout.kata8.footer')
 </body>
 </htm>

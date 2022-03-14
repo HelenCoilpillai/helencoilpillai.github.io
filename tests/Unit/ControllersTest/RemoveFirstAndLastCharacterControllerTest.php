@@ -9,11 +9,11 @@
  *
  */
 
-namespace tests\Unit\ControllerTest;
+namespace tests\Unit\ControllerTest\Kata8;
 
-use App\Http\Controllers\RemoveFirstAndLastCharacterController;
-use App\Http\Requests\RemoveFirstAndLastCharacterRequest;
-use App\Service\Kata\RemoveFirstAndLastCharacterService;
+use App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController;
+use App\Http\Requests\Kata8\RemoveFirstAndLastCharacterRequest;
+use App\Service\Kata8\RemoveFirstAndLastCharacterService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Mockery;

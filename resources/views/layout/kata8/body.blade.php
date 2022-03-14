@@ -2,6 +2,6 @@
     <h1 margin-top>
         @yield('headerTitle')
     </h1>
-    @include('layout.components.alert')
+    @include('layout.kata8.alert')
     @yield('body')
 </div>

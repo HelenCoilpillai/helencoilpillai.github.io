@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Kata8;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ReverseWordRequest extends FormRequest
+class MeanOfAnArrayRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,16 +23,16 @@ class ReverseWordRequest extends FormRequest
      */
     public function rules()
     {
+        $regexValidationForCommaSeparatedNumbers = 'regex:/^( |,)*\d+ *(?:, *\d+( |,)*)*$/';
         return [
-            'reverseWordsText' => ['required', 'max:50']
+            'marks' => ['required', $regexValidationForCommaSeparatedNumbers]
         ];
     }
 
     public function messages()
     {
         return [
-            'reverseWordsText.required' => "The 'Reverse Words Text' field is required",
-            'reverseWordsText.max' => "The 'Reverse Words Text' must not be greater than 50 characters"
+            'marks.regex' => 'The marks field must only contain comma separated numbers'
         ];
     }
 }

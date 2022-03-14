@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TheWideMouthFrogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,21 +29,21 @@ Route::get('/wide-mouth-frog', function () {
     return view('../challengers/theWideMouthFrog');
 });
 
-Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\TheWideMouthFrogController@animalNameFormSubmit')
+Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\Kata8\TheWideMouthFrogController@animalNameFormSubmit')
     ->name('wide-mouth-frog-form-submit');
 
 Route::get('/calculate-the-mean', function () {
     return view('../challengers/meanOfAnArray');
 });
 
-Route::post('/calculate-the-mean/submit', 'App\Http\Controllers\MeanOfAnArrayController@meanOfAnArrayFormSubmit')
+Route::post('/calculate-the-mean/submit', 'App\Http\Controllers\Kata8\MeanOfAnArrayController@meanOfAnArrayFormSubmit')
     ->name('calculate-the-mean-form-submit');
 
 Route::get('/reverse-words', function () {
     return view('../challengers/reverseWords');
 });
 
-Route::post('/reverse-words/submit', 'App\Http\Controllers\ReverseWordsController@reverseWordsFormSubmit')
+Route::post('/reverse-words/submit', 'App\Http\Controllers\Kata8\ReverseWordsController@reverseWordsFormSubmit')
     ->name('reverse-words-form-submit');
 
 Route::get('/remove-first-and-last-character', function () {
@@ -52,7 +51,7 @@ Route::get('/remove-first-and-last-character', function () {
 });
 
 Route::post('/remove-first-and-last-character/submit',
-    'App\Http\Controllers\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
+    'App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
     ->name('remove-first-and-last-character-form-submit');
 
 Route::get('/string-repeat', function () {
@@ -60,7 +59,7 @@ Route::get('/string-repeat', function () {
 });
 
 Route::post('/string-repeat/submit',
-    'App\Http\Controllers\StringRepeatController@stringRepeatFormSubmit')
+    'App\Http\Controllers\Kata8\StringRepeatController@stringRepeatFormSubmit')
     ->name('string-repeat-form-submit');
 
 

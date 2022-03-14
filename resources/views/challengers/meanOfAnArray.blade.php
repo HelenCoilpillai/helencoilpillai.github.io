@@ -9,7 +9,7 @@
 @endsection
 
 @section('body')
-    @component('layout.components.form')
+    @component('layout.kata8.form')
         @slot('action')
             {{route('calculate-the-mean-form-submit')}}
         @endslot
@@ -19,7 +19,7 @@
 
         @slot('formContent')
             <div class="row nav-row">
-                @component('layout.components.inputField')
+                @component('layout.kata8.inputField')
                     @slot('divClass')
                         col-md-3
                     @endslot
@@ -43,7 +43,7 @@
             <br>
 
             <div class="row nav-row">
-                @component('layout.components.button')
+                @component('layout.kata8.button')
                     @slot('buttonType')
                         button
                     @endslot
@@ -60,7 +60,7 @@
                     @endslot
                 @endcomponent
 
-                @component('layout.components.button')
+                @component('layout.kata8.button')
                     @slot('buttonType')
                         submit
                     @endslot
