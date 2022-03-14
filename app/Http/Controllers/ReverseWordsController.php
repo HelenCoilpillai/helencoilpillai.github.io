@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ReverseWordRequest;
 use App\Service\Kata\ReverseWordService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 
 class ReverseWordsController extends Controller
 {
@@ -30,6 +31,18 @@ class ReverseWordsController extends Controller
     {
         $textToBeReversed = $request->input('reverseWordsText');
         $reversedText = $this->reverseWordService->reverseWords($textToBeReversed);
-        return redirect()->back()->with('message', "This is the reversed text: {$reversedText}");
+
+        return $this->getRedirectObject()
+            ->back()
+            ->with('message', "This is the reversed text: {$reversedText}");
+    }
+
+    /**
+     * @codeCoverageIgnore
+     * @return \Illuminate\Contracts\Foundation\Application|RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    protected function getRedirectObject(): Redirector
+    {
+        return redirect();
     }
 }
