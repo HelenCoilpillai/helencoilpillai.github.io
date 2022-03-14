@@ -73,7 +73,7 @@ class ReverseWordsControllerTest extends TestCase
             ->with($textToBeReversed)
             ->andReturn($reversedText);
 
-        $this->reverseWordsControllerMock->shouldReceive('getReidrectObject')
+        $this->reverseWordsControllerMock->shouldReceive('getRedirectObject')
             ->once()
             ->withNoArgs()
             ->andReturn($this->redirectorMock);
