@@ -1,38 +1,38 @@
 @extends('.layout.app')
 
 @section('title')
-    The Wide Mouth Frog
+    Remove First and Last Character
 @endsection
 
 @section('headerTitle')
-    The Wide Mouth Frog
+    Remove First and Last Character
 @endsection
 
 @section('body')
-    @component('layout.kata8.form')
+    @component('layout.components.form')
         @slot('action')
-            {{route('wide-mouth-frog-form-submit')}}
+            {{route('remove-first-and-last-character-form-submit')}}
         @endslot
         @slot('formId')
-            wideMouthFrogForm
+            removeFirstAndLastCharacterForm
         @endslot
 
         @slot('formContent')
             <div class="row nav-row">
-                @component('layout.kata8.inputField')
+                @component('layout.components.inputField')
                     @slot('divClass')
                         col-md-3
                     @endslot
                     @slot('label')
-                        Animal:
+                        Input:
                     @endslot
                     @slot('class')
                     @endslot
                     @slot('id')
-                        textInputAnimal
+                        textInput
                     @endslot
                     @slot('name')
-                        animal
+                        input
                     @endslot
                     @slot('type')
                         text
@@ -42,7 +42,7 @@
             <br>
 
             <div class="row nav-row">
-                @component('layout.kata8.button')
+                @component('layout.components.button')
                     @slot('buttonType')
                         button
                     @endslot
@@ -50,7 +50,7 @@
                         col-md-1 btnBack btn btn-outline-secondary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnBackWideMouthFrog
+                        btnBackRremoveFirstAndLastCharacter
                     @endslot
                     @slot('buttonContent')
                         <a class="stretched-link" href="../kata8">
@@ -59,7 +59,7 @@
                     @endslot
                 @endcomponent
 
-                @component('layout.kata8.button')
+                @component('layout.components.button')
                     @slot('buttonType')
                         submit
                     @endslot
@@ -67,7 +67,7 @@
                         col-md-1  btn btn-primary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnSubmitAnimal
+                        btnSubmitTextInput
                     @endslot
                     @slot('buttonContent')
                         Submit

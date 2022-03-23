@@ -1,49 +1,53 @@
 @extends('.layout.app')
 
 @section('title')
-    Reverse Words
+    Highest and Lowest
 @endsection
 
 @section('headerTitle')
-    Reverse Words
+    Highest and Lowest
 @endsection
 
 @section('body')
-    @component('layout.kata8.form')
+    @component('layout.components.form')
         @slot('action')
-            {{route('reverse-words-form-submit')}}
+            {{route('highest-and-lowest-form-submit')}}
         @endslot
         @slot('formId')
-            reverseWordsForm
+            highestAndLowestForm
         @endslot
 
         @slot('formContent')
-            <div class="row nav-row">
-                @component('layout.kata8.inputField')
+            <div class="row">
+                @component('layout.components.inputField')
                     @slot('divClass')
-                        col-md-3
+                        col-md-3 form-group required
+                    @endslot
+                    @slot('labelClass')
+                        control-label
                     @endslot
                     @slot('label')
-                        Reverse Words Text:
-                    @endslot
-                    @slot('class')
+                        Numbers:
                     @endslot
                     @slot('id')
-                        reverseWordsText
+                        numbers
                     @endslot
                     @slot('name')
-                        reverseWordsText
+                        numbers
                     @endslot
                     @slot('type')
                         text
                     @endslot
+                    @slot('value')
+                        {{ old('numbers', isset($name->numbers) ?? '') }}
+                    @endslot
                 @endcomponent
             </div>
-            <div><small>*Enter the text to be reversed</small></div>
+
             <br>
 
-            <div class="row nav-row">
-                @component('layout.kata8.button')
+            <div class="row">
+                @component('layout.components.button')
                     @slot('buttonType')
                         button
                     @endslot
@@ -51,16 +55,16 @@
                         col-md-1 btnBack btn btn-outline-secondary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnBackReverseWords
+                        backBtnHighestAndLowestNumbers
                     @endslot
                     @slot('buttonContent')
-                        <a class="stretched-link" href="../kata8">
+                        <a class="stretched-link" href="../kata7">
                             Back
                         </a>
                     @endslot
                 @endcomponent
 
-                @component('layout.kata8.button')
+                @component('layout.components.button')
                     @slot('buttonType')
                         submit
                     @endslot
@@ -68,7 +72,7 @@
                         col-md-1  btn btn-primary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        btnSubmitForReverseWords
+                        submitBtnHighestAndLowestNumbers
                     @endslot
                     @slot('buttonContent')
                         Submit

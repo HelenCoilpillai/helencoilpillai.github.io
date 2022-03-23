@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TheWideMouthFrogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,40 +27,42 @@ Route::get('/kata8', function () {
 });
 
 Route::get('/wide-mouth-frog', function () {
-    return view('../challengers/theWideMouthFrog');
+    return view('../kata8/theWideMouthFrog');
 });
 
 Route::post('/wide-mouth-frog/submit', 'App\Http\Controllers\Kata8\TheWideMouthFrogController@animalNameFormSubmit')
     ->name('wide-mouth-frog-form-submit');
 
 Route::get('/calculate-the-mean', function () {
-    return view('../challengers/meanOfAnArray');
+    return view('../kata8/meanOfAnArray');
 });
 
 Route::post('/calculate-the-mean/submit', 'App\Http\Controllers\Kata8\MeanOfAnArrayController@meanOfAnArrayFormSubmit')
     ->name('calculate-the-mean-form-submit');
 
 Route::get('/reverse-words', function () {
-    return view('../challengers/reverseWords');
+    return view('../kata8/reverseWords');
 });
 
 Route::post('/reverse-words/submit', 'App\Http\Controllers\Kata8\ReverseWordsController@reverseWordsFormSubmit')
     ->name('reverse-words-form-submit');
 
 Route::get('/remove-first-and-last-character', function () {
-    return view('../challengers/removeFirstAndLastCharacter');
+    return view('../kata8/removeFirstAndLastCharacter');
 });
 
 Route::post('/remove-first-and-last-character/submit',
     'App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
     ->name('remove-first-and-last-character-form-submit');
 
-Route::get('/string-repeat', function () {
-    return view('../challengers/stringRepeat');
+Route::get('/kata7', function () {
+    return view('overviews/kata7Overview');
 });
 
-Route::post('/string-repeat/submit',
-    'App\Http\Controllers\Kata8\StringRepeatController@stringRepeatFormSubmit')
-    ->name('string-repeat-form-submit');
+Route::get('/highest-and-lowest', function () {
+    return view('../kata7/highestAndLowestNumbers');
+});
 
-
+Route::post('/highest-and-lowest/submit',
+    'App\Http\Controllers\Kata7\HighestAndLowestNumbersController@highestAndLowestNumbersFormSubmit')
+    ->name('highest-and-lowest-form-submit');

@@ -1,16 +1,16 @@
-@extends('layout.app')
+@extends('.layout.app')
 
 @section('title')
     Portfolio - Overview
 @endsection
 
 @section('headerTitle')
-    Course work
+    Kata 7
 @endsection
 
 @section('body')
     <div class="float-left m-2">
-        <a href="/"
+        <a href="/my-work"
            class="btn btn-outline-primary btn-sm btnBack">
             Back
         </a>
@@ -22,36 +22,32 @@
                 courseWork
             @endslot
             @slot('tableHeader')
-                <th>Type</th>
-                <th>Level</th>
+                <th>Title</th>
                 <th></th>
             @endslot
             @slot('tableBody')
                 <tr>
-                    <td>Kata</td>
-                    <td>Level 8</td>
+                    <td>
+                        <a target="_blank" href="https://www.codewars.com/kata/554b4ac871d6813a03000035">
+                            Highest and Lowest
+                        </a>
+                    </td>
                     <td id="colButtons">
-                        <a href="/kata8"
+                        <a href="/highest-and-lowest"
                            class="btn btn-primary btn-sm btnTry">
-                            Details
+                            Try!
+                        </a>
+                        <a target="_blank"
+                           href="https://www.codewars.com/kata/reviews/5bd724c196b46faaea0012e4/groups/5bf27cfeff398612f800005a"
+                           class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
+                            Answer
                         </a>
                     </td>
                 </tr>
-
-                <tr>
-                    <td>Kata</td>
-                    <td>Level 7</td>
-                    <td id="colButtons">
-                        <a href="/kata7"
-                           class="btn btn-primary btn-sm btnTry">
-                            Details
-                        </a>
-                    </td>
-                </tr>
-
             @endslot
         @endcomponent
     </div>
+
 @endsection
 
 
