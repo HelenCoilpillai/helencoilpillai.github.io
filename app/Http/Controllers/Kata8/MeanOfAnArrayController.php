@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Kata8;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Kata8\MeanOfAnArrayRequest;
 use App\Service\Kata8\MeanOfAnArrayService;
-use function redirect;
 
 class MeanOfAnArrayController extends Controller
 {

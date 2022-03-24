@@ -7,7 +7,6 @@ use App\Http\Requests\Kata8\StringRepeatRequest;
 use App\Service\Kata8\StringRepeatService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
-use function redirect;
 
 class StringRepeatController extends Controller
 {

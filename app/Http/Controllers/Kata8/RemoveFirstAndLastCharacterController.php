@@ -7,7 +7,6 @@ use App\Http\Requests\Kata8\RemoveFirstAndLastCharacterRequest;
 use App\Service\Kata8\RemoveFirstAndLastCharacterService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
-use function redirect;
 
 class RemoveFirstAndLastCharacterController extends Controller
 {

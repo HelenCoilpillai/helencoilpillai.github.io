@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Kata8;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Kata8\TheWideMouthFrogRequest;
 use App\Service\Kata8\TheWideMouthFrogService;
-use function redirect;
 
 class TheWideMouthFrogController extends Controller
 {

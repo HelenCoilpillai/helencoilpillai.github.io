@@ -54,6 +54,15 @@ Route::post('/remove-first-and-last-character/submit',
     'App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
     ->name('remove-first-and-last-character-form-submit');
 
+
+Route::get('/string-repeat', function () {
+    return view('../kata8/stringRepeat');
+});
+
+Route::post('/string-repeat/submit',
+    'App\Http\Controllers\Kata8\StringRepeatController@stringRepeatFormSubmit')
+    ->name('string-repeat-form-submit');
+
 Route::get('/kata7', function () {
     return view('overviews/kata7Overview');
 });
