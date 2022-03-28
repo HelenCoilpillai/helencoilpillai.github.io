@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Kata8;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Kata8\StringRepeatRequest;
+use App\Service\Kata8\StringRepeatService;
 use Illuminate\Http\RedirectResponse;
-use App\Http\Requests\StringRepeatRequest;
-use App\Service\Kata\StringRepeatService;
 use Illuminate\Routing\Redirector;
 
 class StringRepeatController extends Controller

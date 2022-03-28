@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\Kata;
+namespace App\Service\Kata8;
 
 class RemoveFirstAndLastCharacterService
 {

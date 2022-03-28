@@ -8,9 +8,9 @@
  * @run: php artisan test --filter RemoveFirstAndLastCharacterServiceTest
  */
 
-namespace tests\Unit\ServiceTest;
+namespace tests\Unit\ServiceTest\Kata8;
 
-use App\Service\Kata\RemoveFirstAndLastCharacterService;
+use App\Service\Kata8\RemoveFirstAndLastCharacterService;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;

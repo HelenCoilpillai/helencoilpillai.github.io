@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Kata8;
 
 use Illuminate\Foundation\Http\FormRequest;
 

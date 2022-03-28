@@ -9,11 +9,11 @@
  *
  */
 
-namespace tests\Unit\ControllersTest;
+namespace tests\Unit\ControllersTest\Kata8;
 
-use App\Http\Controllers\ReverseWordsController;
-use App\Http\Requests\ReverseWordRequest;
-use App\Service\Kata\ReverseWordService;
+use App\Http\Controllers\Kata8\ReverseWordsController;
+use App\Http\Requests\Kata8\ReverseWordRequest;
+use App\Service\Kata8\ReverseWordService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Mockery;

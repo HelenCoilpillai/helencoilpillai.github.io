@@ -11,7 +11,7 @@
 
 namespace tests\Unit\ServiceTest;
 
-use App\Service\Kata\ReverseWordService;
+use App\Service\Kata8\ReverseWordService;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;

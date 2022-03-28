@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Kata8;
 
-use App\Http\Requests\RemoveFirstAndLastCharacterRequest;
-use App\Service\Kata\RemoveFirstAndLastCharacterService;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Kata8\RemoveFirstAndLastCharacterRequest;
+use App\Service\Kata8\RemoveFirstAndLastCharacterService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 
