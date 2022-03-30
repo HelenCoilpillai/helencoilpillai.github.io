@@ -9,7 +9,7 @@
  *
  */
 
-namespace tests\Unit\ServiceTest;
+namespace tests\Unit\ServiceTest\Kata8;
 
 use App\Service\Kata8\StringRepeatService;
 use Mockery;
