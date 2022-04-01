@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Kata7\HighestAndLowestNumbersRequest;
 use App\Service\Kata7\HighestAndLowestNumbersService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 
 
 class HighestAndLowestNumbersController extends Controller
@@ -31,8 +32,17 @@ class HighestAndLowestNumbersController extends Controller
     {
         $numbers = $request->input('numbers');
         $minAndMaxNumbers = $this->highestAndLowestNumbersService->findHighestAndLowestNumbers($numbers);
-        return redirect()
+        return $this->getRedirectObject()
             ->back()
             ->with('message', "{$minAndMaxNumbers}");
+    }
+
+    /**
+     * @codeCoverageIgnore
+     * @return Redirector
+     */
+    protected function getRedirectObject(): Redirector
+    {
+        return redirect();
     }
 }
