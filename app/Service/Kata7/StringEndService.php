@@ -9,7 +9,7 @@ class StringEndService
      * @param string $stringEnding
      * @return string
      */
-    public function isStringMatchingTheGivenEnding(string $stringValue, string $stringEnding): string
+    public function checkIfStringMatchesTheGivenEnding(string $stringValue, string $stringEnding): string
     {
         $isStringMatchingTheGivenEnding = str_ends_with($stringValue, $stringEnding);
 

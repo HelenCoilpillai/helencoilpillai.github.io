@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Kata7\StringEndRequest;
 use App\Service\Kata7\StringEndService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 
 class StringEndController extends Controller
 {
@@ -30,12 +31,21 @@ class StringEndController extends Controller
     {
         $stringValue = $request->input('text');
         $stringEnd = $request->input('textEnding');
-        $messageString = $this->stringEndService->isStringMatchingTheGivenEnding($stringValue, $stringEnd);
+        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEnding($stringValue, $stringEnd);
 
-        return redirect()
+        return $this->getRedirectObject()
             ->back()
             ->with('message', $messageString);
 
+    }
+
+    /**
+     * @return Redirector
+     * @codeCoverageIgnore
+     */
+    protected function getRedirectObject(): Redirector
+    {
+        return redirect();
     }
 
 }
