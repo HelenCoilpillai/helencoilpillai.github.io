@@ -74,3 +74,11 @@ Route::get('/highest-and-lowest', function () {
 Route::post('/highest-and-lowest/submit',
     'App\Http\Controllers\Kata7\HighestAndLowestNumbersController@highestAndLowestNumbersFormSubmit')
     ->name('highest-and-lowest-form-submit');
+
+Route::get('/string-end', function () {
+    return view('../kata7/stringEnd');
+});
+
+Route::post('/string-end/submit',
+    'App\Http\Controllers\Kata7\StringEndController@stringEndFormSubmit')
+    ->name('string-end-form-submit');
