@@ -58,19 +58,19 @@
                         Text Ending:
                     @endslot
                     @slot('id')
-                        textEnding
+                        text_ending
                     @endslot
                     @slot('required')
                         true
                     @endslot
                     @slot('name')
-                        textEnding
+                        text_ending
                     @endslot
                     @slot('type')
                         text
                     @endslot
                     @slot('value')
-                        {{ old('textEnding', isset($name->textEnding) ?? '') }}
+                        {{ old('text_ending', isset($name->text_ending) ?? '') }}
                     @endslot
                 @endcomponent
             </div>

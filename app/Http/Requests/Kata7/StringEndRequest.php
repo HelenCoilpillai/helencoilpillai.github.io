@@ -25,7 +25,7 @@ class StringEndRequest extends FormRequest
     {
         return [
             'text' => ['required', 'max:30'],
-            'textEnding' => ['required', 'max:30']
+            'text_ending' => ['required', 'max:30']
         ];
     }
 }

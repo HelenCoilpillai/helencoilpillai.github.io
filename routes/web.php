@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Kata7\StringEndController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,3 +83,10 @@ Route::get('/string-end', function () {
 Route::post('/string-end/submit',
     'App\Http\Controllers\Kata7\StringEndController@stringEndFormSubmit')
     ->name('string-end-form-submit');
+
+Route::get('/string-end-result-history', function () {
+    return view('../kata7/historyResults/stringEndResults');
+});
+
+Route::get('/string-end-result-history', [StringEndController::class, 'index']);
+

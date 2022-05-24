@@ -61,6 +61,10 @@
                            class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
                             Answer
                         </a>
+                        <a href="/string-end-result-history"
+                           class="btn btn-dark btn-sm ml-md-2 btnHistoryResult">
+                            History Results
+                        </a>
                     </td>
                 </tr>
             @endslot

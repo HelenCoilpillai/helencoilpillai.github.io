@@ -2,6 +2,9 @@
 
 namespace App\Service\Kata7;
 
+use App\Http\Requests\Kata7\StringEndRequest;
+use App\Models\Kata7\StringEnd;
+
 class StringEndService
 {
     /**
