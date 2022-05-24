@@ -57,9 +57,7 @@ class StringEndController extends Controller
         ]);
 
         $this->store($stringEndDetails);
-        $stringValue = $stringEndDetails['text'];
-        $stringEnd = $stringEndDetails['text_ending'];
-        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEnding($stringValue, $stringEnd);
+        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEnding($stringEndDetails['text'], $stringEndDetails['text_ending']);
 
         return $this->getRedirectObject()
             ->back()
