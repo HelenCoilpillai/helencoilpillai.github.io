@@ -34,7 +34,7 @@ class StringEndServiceTest extends TestCase
     }
 
     /**
-     * @covers \App\Service\Kata7\StringEndService::checkIfStringMatchesTheGivenEnding
+     * @covers \App\Service\Kata7\StringEndService::checkIfStringMatchesTheGivenEndingAndReturnStringMessage
      */
     public function testCheckIfStringMatchesTheGivenEndingReturnsMessageWhenTextEndingDoesNotMatch()
     {
@@ -43,12 +43,12 @@ class StringEndServiceTest extends TestCase
         $stringEnding = "noMatch";
 
         $this->assertSame("The text does not match the given text ending",
-            $stringEndService->checkIfStringMatchesTheGivenEnding($stringValue, $stringEnding));
+            $stringEndService->checkIfStringMatchesTheGivenEndingAndReturnStringMessage($stringValue, $stringEnding));
 
     }
 
     /**
-     * @covers \App\Service\Kata7\StringEndService::checkIfStringMatchesTheGivenEnding
+     * @covers \App\Service\Kata7\StringEndService::checkIfStringMatchesTheGivenEndingAndReturnStringMessage
      */
     public function testCheckIfStringMatchesTheGivenEndingReturnsMessageWhenTextEndingDoesMatch()
     {
@@ -57,7 +57,7 @@ class StringEndServiceTest extends TestCase
         $stringEnding = "ice";
 
         $this->assertSame("The text matches the given text ending",
-            $stringEndService->checkIfStringMatchesTheGivenEnding($stringValue, $stringEnding));
+            $stringEndService->checkIfStringMatchesTheGivenEndingAndReturnStringMessage($stringValue, $stringEnding));
 
     }
 }

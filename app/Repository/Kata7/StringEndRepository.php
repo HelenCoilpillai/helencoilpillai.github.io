@@ -3,8 +3,6 @@
 namespace App\Repository\Kata7;
 use App\Interfaces\CrudRepositoryInterface;
 use App\Models\Kata7\StringEnd;
-use phpDocumentor\Reflection\Types\Collection;
-use phpDocumentor\Reflection\Types\Mixed_;
 
 class StringEndRepository implements CrudRepositoryInterface
 {

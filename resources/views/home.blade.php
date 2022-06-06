@@ -10,7 +10,7 @@
 
 @section('body')
     <div>
-        <a href="/my-work"
+        <a href="/challengers"
            class="btn btn-outline-secondary btn-sm ml-md-2">
             My Work
         </a>

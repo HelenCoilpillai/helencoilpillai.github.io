@@ -10,7 +10,7 @@
 
 @section('body')
     <div class="float-left m-2">
-        <a href="/my-work"
+        <a href="/challengers"
            class="btn btn-outline-primary btn-sm btnBack">
             Back
         </a>

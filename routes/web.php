@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/my-work', function () {
-    return view('overviews/generalOverview');
+Route::get('/challengers', function () {
+    return view('overviews/challengersOverview');
 });
 
 Route::get('/kata8', function () {

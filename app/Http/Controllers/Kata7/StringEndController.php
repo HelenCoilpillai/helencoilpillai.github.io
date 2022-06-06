@@ -9,8 +9,6 @@ use App\Service\Kata7\StringEndService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
-use Resources\views;
-
 
 class StringEndController extends Controller
 {
@@ -57,7 +55,7 @@ class StringEndController extends Controller
         ]);
 
         $this->store($stringEndDetails);
-        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEnding($stringEndDetails['text'], $stringEndDetails['text_ending']);
+        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEndingAndReturnStringMessage($stringEndDetails['text'], $stringEndDetails['text_ending']);
 
         return $this->getRedirectObject()
             ->back()
