@@ -22,10 +22,6 @@ class StringEndController extends Controller
         $this->stringEndRepository = $stringEndRepository;
     }
 
-    /**
-     * @param array $stringEndDetails
-     * @return void
-     */
     public function store(array $stringEndDetails): void
     {
         $this->stringEndRepository->create($stringEndDetails);
