@@ -4,24 +4,21 @@ namespace App\Http\Controllers\Kata7;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Kata7\StringEndRequest;
-use App\Interfaces\CrudRepositoryInterface;
-use App\Service\Kata7\StringEndService;
+use App\Interfaces\RepositoryInterface;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 
 class StringEndController extends Controller
 {
-    protected StringEndService $stringEndService;
-    protected CrudRepositoryInterface $stringEndRepository;
+    protected RepositoryInterface $stringEndRepository;
 
     /**
-     * @param StringEndService $stringEndService
-     * @param CrudRepositoryInterface $stringEndRepository
+     * @param RepositoryInterface $stringEndRepository
      */
-    public function __construct(StringEndService $stringEndService, CrudRepositoryInterface $stringEndRepository)
+    public function __construct(RepositoryInterface $stringEndRepository)
     {
-        $this->stringEndService = $stringEndService;
         $this->stringEndRepository = $stringEndRepository;
     }
 
@@ -35,7 +32,7 @@ class StringEndController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|\Illuminate\Contracts\View\View
      */
     public function index(): View
     {
@@ -55,7 +52,12 @@ class StringEndController extends Controller
         ]);
 
         $this->store($stringEndDetails);
-        $messageString = $this->stringEndService->checkIfStringMatchesTheGivenEndingAndReturnStringMessage($stringEndDetails['text'], $stringEndDetails['text_ending']);
+
+        if (str_ends_with($stringEndDetails['text'], $stringEndDetails['text_ending']) === true) {
+            $messageString = "The text matches the given text ending";
+        } else {
+            $messageString = "The text does not match the given text ending";
+        }
 
         return $this->getRedirectObject()
             ->back()

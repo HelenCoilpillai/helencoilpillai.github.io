@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Repository\Kata7;
-use App\Interfaces\CrudRepositoryInterface;
+
+use App\Interfaces\RepositoryInterface;
 use App\Models\Kata7\StringEnd;
 
-class StringEndRepository implements CrudRepositoryInterface
+class StringEndRepository implements RepositoryInterface
 {
     /**
      * @return StringEnd[]|\Illuminate\Database\Eloquent\Collection

@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Interfaces\CrudRepositoryInterface;
+use App\Interfaces\RepositoryInterface;
 use App\Repository\Kata7\StringEndRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,7 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(CrudRepositoryInterface::class, StringEndRepository::class);
+        $this->app->bind(RepositoryInterface::class, StringEndRepository::class);
 
     }
 
