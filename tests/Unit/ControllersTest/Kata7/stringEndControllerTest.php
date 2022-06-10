@@ -13,7 +13,7 @@ namespace tests\Unit\ControllerTest\Kata7;
 
 use App\Http\Controllers\Kata7\StringEndController;
 use App\Http\Requests\Kata7\StringEndRequest;
-use App\Service\Kata7\StringEndService;
+use App\Repository\Kata7\StringEndRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Mockery;
@@ -26,9 +26,8 @@ class stringEndControllerTest extends TestCase
     private $redirectResponseMock;
     private $stringEndControllerMock;
     private $stringEndRequestMock;
-    private $stringEndServiceMock;
     private $redirectorMock;
-
+    private $stringEndRepositoryMock;
 
     public function setUp(): void
     {
@@ -40,9 +39,9 @@ class stringEndControllerTest extends TestCase
 
         $this->stringEndRequestMock = Mockery::mock(StringEndRequest::class);
 
-        $this->stringEndServiceMock = Mockery::mock(StringEndService::class);
-
         $this->redirectorMock = Mockery::mock(Redirector::class);
+
+        $this->stringEndRepositoryMock = Mockery::mock(StringEndRepository::class);
     }
 
     public function tearDown(): void
@@ -59,26 +58,22 @@ class stringEndControllerTest extends TestCase
      */
     public function testStringEndFormSubmitRedirectsWithMessage()
     {
-        $stringValue = "testingTheStringEndService";
-        $stringEnding = "ice";
         $messageString = "The text matches the given text ending";
+        $specialMessageString = "The input values have been saved!";
+        $inputFields = ['text', 'text_ending'];
+        $inputData = ['text' => 'testingTheStringEndService', 'text_ending' => 'ice'];
 
-        $this->stringEndRequestMock->shouldReceive('input')
+        $this->stringEndRequestMock->shouldReceive('only')
             ->once()
-            ->with('text')
-            ->andReturn($stringValue);
+            ->with($inputFields)
+            ->andReturn($inputData);
 
-        $this->stringEndRequestMock->shouldReceive('input')
+        $this->stringEndControllerMock->__construct($this->stringEndRepositoryMock);
+
+        $this->stringEndControllerMock->shouldReceive('store')
             ->once()
-            ->with('textEnding')
-            ->andReturn($stringEnding);
-
-        $this->stringEndControllerMock->__construct($this->stringEndServiceMock);
-
-        $this->stringEndServiceMock->shouldReceive('checkIfStringMatchesTheGivenEnding')
-            ->once()
-            ->withArgs([$stringValue, $stringEnding])
-            ->andReturn($messageString);
+            ->with($inputData)
+            ->andReturnNull();
 
         $this->stringEndControllerMock->shouldReceive('getRedirectObject')
             ->once()
@@ -93,6 +88,11 @@ class stringEndControllerTest extends TestCase
         $this->redirectResponseMock->shouldReceive('with')
             ->once()
             ->withArgs(["message", $messageString])
+            ->andReturnSelf();
+
+        $this->redirectResponseMock->shouldReceive('with')
+            ->once()
+            ->withArgs(["specialMessage", $specialMessageString])
             ->andReturnSelf();
 
         $this->assertSame($this->redirectResponseMock,

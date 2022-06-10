@@ -10,7 +10,7 @@
 
 @section('body')
     <div class="float-left m-2">
-        <a href="/my-work"
+        <a href="/challengers"
            class="btn btn-outline-primary btn-sm btnBack">
             Back
         </a>
@@ -60,6 +60,10 @@
                            href="https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/solutions/php/me/best_practice"
                            class="btn btn-outline-secondary btn-sm ml-md-2 btnAnswer">
                             Answer
+                        </a>
+                        <a href="/string-end-result-history"
+                           class="btn btn-dark btn-sm ml-md-2 btnHistoryResult">
+                            History Results
                         </a>
                     </td>
                 </tr>
