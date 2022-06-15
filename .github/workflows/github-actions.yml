@@ -22,5 +22,13 @@ jobs:
         run: vendor/bin/phpunit tests/Unit/ControllersTest
       - name: Run Testsuite
         run: vendor/bin/phpunit tests/Unit/ServiceTest
-      - name: sniff
-        run: composer sniff
+
+steps:
+  - uses: actions/checkout@v2
+  - uses: php-actions/composer@v5 # or alternative dependency management
+  - name: run tests
+    run: composer test
+  - name: change owner of phpcs
+    run: sudo chmod 777 ./vendor/bin/phpcs
+  - name: sniff
+    run: composer sniff
