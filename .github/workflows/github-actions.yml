@@ -22,3 +22,5 @@ jobs:
         run: vendor/bin/phpunit tests/Unit/ControllersTest
       - name: Run Testsuite
         run: vendor/bin/phpunit tests/Unit/ServiceTest
+      - name: sniff
+        run: composer sniff
