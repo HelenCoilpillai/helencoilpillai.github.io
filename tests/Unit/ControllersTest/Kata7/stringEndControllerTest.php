@@ -58,6 +58,7 @@ class stringEndControllerTest extends TestCase
      */
     public function testStringEndFormSubmitRedirectsWithMessage()
     {
+        $this->assertFalse(true);
         $messageString = "The text matches the given text ending";
         $specialMessageString = "The input values have been saved!";
         $inputFields = ['text', 'text_ending'];
