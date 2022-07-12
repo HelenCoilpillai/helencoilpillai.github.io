@@ -38,4 +38,4 @@ jobs:
           php phpcs.phar --version
 
       - name: run codesniffs
-        run: php phpcs.phar --standard=ruleset.xml
+        run: php phpcs.phar --standard=phpcs.xml
