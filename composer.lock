@@ -5624,7 +5624,7 @@
             "type": "phpcodesniffer-standard",
             "autoload": {
                 "psr-4": {
-                    "PSR12-Strict-Rules\\": "src/PSR12-Strict-Rules/"
+                    "PSR12-Strict-Rules\\": "PSR12-Strict-Rules/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
