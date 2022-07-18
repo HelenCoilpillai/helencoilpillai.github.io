@@ -9,7 +9,7 @@
     <arg name="extensions" value="php"/>
     <arg name="parallel" value="80"/>
 
-    <arg value="p"/>
+    <arg value="ps"/>
 
     <rule ref="PSR12-Strict-Rules"/>
 
