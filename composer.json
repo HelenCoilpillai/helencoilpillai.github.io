@@ -15,6 +15,7 @@
         "laravelcollective/html": "^6.2"
     },
     "require-dev": {
+        "asispts/ptscs": "1.0.x-dev",
         "devbeta/psr12-strict-rules": "^1.0",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",

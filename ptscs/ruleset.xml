@@ -1,131 +1,139 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="ptscs">
-    <description>Another PHP Coding Standard for PHP_CodeSniffer</description>
+    <description>PSR-12 based PHP coding standard</description>
 
-    <arg name="tab-width" value="4"/>
-
+    <arg name="tab-width" value="4" />
     <!-- Don't hide tokenizer exceptions -->
     <rule ref="Internal.Tokenizer.Exception">
         <type>error</type>
     </rule>
 
-    <rule ref="PSR12"/>
-
     <rule ref="PSR12">
-        <exclude name="PSR12.Files.OpenTag.NotAlone"/>
-        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
+        <!-- Allow <?php declare(strict_types=1); in the same line -->
+        <exclude name="PSR12.Files.OpenTag.NotAlone" />
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
     </rule>
 
-
     <!--++++++++++++++++++++++++++++++++++++
-      Generic rules
+    Additional rules
     ++++++++++++++++++++++++++++++++++++-->
-    <rule ref="Generic.PHP.RequireStrictTypes"/>
-    <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
-    <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired"/>
+    <rule ref="Squiz.Classes.ClassFileName" />
+    <rule ref="Generic.PHP.RequireStrictTypes" />
+    <rule ref="Squiz.PHP.CommentedOutCode" />
+    <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired" />
+    <rule ref="Generic.Formatting.MultipleStatementAlignment" />
+
+    <!-- Allow snake_case in test methods -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>/tests/</exclude-pattern>
+    </rule>
+    <!-- Namespace is optional in test classes -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>/tests/</exclude-pattern>
+    </rule>
+
     <!-- Ban some functions -->
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
             <property name="error" value="true" />
             <property name="forbiddenFunctions" type="array">
-                <element key="sizeof" value="count"/>
-                <element key="delete" value="unset"/>
-                <element key="print" value="echo"/>
-                <element key="each" value="foreach"/>
-                <element key="is_null" value="null"/>
-                <element key="create_function" value="null"/>
-                <element key="var_dump" value="null"/>
-                <element key="print_r" value="null"/>
-                <element key="debug_print_backtrace" value="null"/>
-                <element key="eval" value="null"/>
-                <element key="extract" value="null"/>
+                <element key="sizeof" value="count" />
+                <element key="print" value="echo" />
+                <element key="each" value="foreach" />
+                <element key="is_null" value="null" />
+                <element key="create_function" value="null" />
+                <element key="var_dump" value="null" />
+                <element key="print_r" value="null" />
+                <element key="debug_print_backtrace" value="null" />
+                <element key="eval" value="null" />
+                <element key="extract" value="null" />
             </property>
         </properties>
     </rule>
-    <rule ref="Squiz.Operators.ComparisonOperatorUsage"/>
 
+    <!--++++++++++++++++++++++++++++++++++++
+    Array rules
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+    <rule ref="Generic.Arrays.ArrayIndent">
+        <properties>
+            <property name="indent" value="2" />
+        </properties>
+    </rule>
+    <rule ref="Squiz.Arrays.ArrayDeclaration">
+        <!-- Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed" />
+    </rule>
 
-
-    <!--++++++++++++++++++++++++++++++++++
-      Whitespace rules
-    ++++++++++++++++++++++++++++++++++-->
     <!--
-      Fix wrong indentation, eq:
-        $a = 1;
-            $b = 2;
-        These lines should be like this
-        $a = 1;
-        $b = 2;
-      -->
+    Fix wrong indentation, eq:
+      $a = 1;
+          $b = 2;
+      These lines should be like this
+      $a = 1;
+      $b = 2;
+    -->
     <rule ref="Generic.WhiteSpace.ScopeIndent">
         <properties>
-            <property name="indent" value="4"/>
+            <property name="indent" value="4" />
             <property name="exact" value="true" />
             <property name="tabIndent" value="false" />
-            <property name="ignoreIndentationTokens" type="array" value=""/>
+            <!-- <property name="ignoreIndentationTokens" type="array">
+                <element value="T_CLASS" />
+            </property> -->
         </properties>
     </rule>
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
-    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
-    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
-    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>
-
-
-    <!--++++++++++++++++++++++++++++++++++
-      Casting rules
-    ++++++++++++++++++++++++++++++++++-->
-    <rule ref="Generic.Formatting.SpaceAfterCast"/>
-    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
-
-
 
     <!--++++++++++++++++++++++++++++++++++++
-      Array rules
+    Whitespace
     ++++++++++++++++++++++++++++++++++++-->
-    <rule ref="Squiz.Arrays.ArrayDeclaration">
-        <!-- Has been handled by Squiz.WhiteSpace.OperatorSpacing -->
-        <exclude name="Squiz.Arrays.ArrayDeclaration.SpaceAfterDoubleArrow"/>
-        <exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
-    </rule>
-    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-
-
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
+    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
+    <rule ref="Generic.Formatting.SpaceAfterCast" />
 
     <!--++++++++++++++++++++++++++++++++++++
-      Function rules
+    Allow fluent interface
     ++++++++++++++++++++++++++++++++++++-->
-    <!-- Override PSR2 rule-->
-    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint">
-        <severity>9</severity>
-    </rule>
-    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
         <properties>
-            <property name="spacing" value="1" />
-            <property name="spacingAfterLast" value="0" />
+            <property name="ignoreNewlines" value="true" />
         </properties>
     </rule>
-    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
-
-
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
 
     <!--++++++++++++++++++++++++++++++++++++
-      String rules
+    String rules
     ++++++++++++++++++++++++++++++++++++-->
-    <rule ref="Squiz.Strings.EchoedStrings"/>
-    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
     <rule ref="Squiz.Strings.ConcatenationSpacing">
         <properties>
             <property name="spacing" value="1" />
         </properties>
     </rule>
+    <rule ref="Squiz.Strings.EchoedStrings" />
+    <rule ref="Squiz.Strings.DoubleQuoteUsage" />
 
 
     <!--++++++++++++++++++++++++++++++++++++
-      Class declaration rules
+    Function and method rules
     ++++++++++++++++++++++++++++++++++++-->
-    <rule ref="Squiz.Classes.ClassFileName"/>
-    <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
-    <rule ref="PSR2.Namespaces.UseDeclaration"/>
-    <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="0" />
+            <property name="spacingAfterLast" value="0" />
+        </properties>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+        <properties>
+            <property name="spacingBeforeFirst" value="0" />
+        </properties>
+    </rule>
+
+
 </ruleset>

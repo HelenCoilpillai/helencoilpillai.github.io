@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a051128a7b3c3e9f2228d931e6f9afaf",
+    "content-hash": "399057476c893f391778ad6d33fc7ac2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5528,6 +5528,56 @@
     ],
     "packages-dev": [
         {
+            "name": "asispts/ptscs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asispts/ptscs.git",
+                "reference": "19a9a3e01a21ce26a2bc5ef680674662f2f3b7d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asispts/ptscs/zipball/19a9a3e01a21ce26a2bc5ef680674662f2f3b7d1",
+                "reference": "19a9a3e01a21ce26a2bc5ef680674662f2f3b7d1",
+                "shasum": ""
+            },
+            "require": {
+                "dealerdirect/phpcodesniffer-composer-installer": "0.*",
+                "php": ">=5.4.0",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "default-branch": true,
+            "type": "phpcodesniffer-standard",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asis Pattisahusiwa",
+                    "email": "asis.pattisahusiwa@gmail.com"
+                }
+            ],
+            "description": "PSR-12 coding standard with some strict rules",
+            "keywords": [
+                "coding",
+                "phpcs",
+                "standard",
+                "standards",
+                "style"
+            ],
+            "support": {
+                "issues": "https://github.com/asispts/ptscs/issues",
+                "source": "https://github.com/asispts/ptscs/tree/main"
+            },
+            "time": "2022-07-13T09:54:13+00:00"
+        },
+        {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
             "version": "v0.7.2",
             "source": {
@@ -8250,7 +8300,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "asispts/ptscs": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
