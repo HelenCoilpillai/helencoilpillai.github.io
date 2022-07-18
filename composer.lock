@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66b685d3227262f61db18d6602fb34c0",
+    "content-hash": "a051128a7b3c3e9f2228d931e6f9afaf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6370,6 +6370,54 @@
                 }
             ],
             "time": "2022-01-10T16:22:52+00:00"
+        },
+        {
+            "name": "pattisahusiwa/coding-standard",
+            "version": "v0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pattisahusiwa/coding-standard.git",
+                "reference": "a2b187ef53628f1d4c734491796aade8b697bd98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pattisahusiwa/coding-standard/zipball/a2b187ef53628f1d4c734491796aade8b697bd98",
+                "reference": "a2b187ef53628f1d4c734491796aade8b697bd98",
+                "shasum": ""
+            },
+            "require": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asis Pattisahusiwa",
+                    "email": "asis.pattisahusiwa@gmail.com"
+                }
+            ],
+            "description": "Another PHP Coding Standard for PHP_CodeSniffer",
+            "homepage": "https://github.com/pattisahusiwa/coding-standard",
+            "keywords": [
+                "coding",
+                "phpcs",
+                "standard",
+                "standards",
+                "style"
+            ],
+            "support": {
+                "issues": "https://github.com/pattisahusiwa/coding-standard/issues",
+                "source": "https://github.com/pattisahusiwa/coding-standard/tree/v0.4"
+            },
+            "abandoned": "asispts/ptscs",
+            "time": "2020-10-05T22:01:36+00:00"
         },
         {
             "name": "phar-io/manifest",
