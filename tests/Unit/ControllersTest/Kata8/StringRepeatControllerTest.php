@@ -97,8 +97,10 @@ class StringRepeatControllerTest extends TestCase
             ->withArgs(["specialMessage", $formattedRepeatedString])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
-            $this->stringRepeatControllerMock->stringRepeatFormSubmit($this->stringRepeatRequestMock));
+        $this->assertSame(
+            $this->redirectResponseMock,
+            $this->stringRepeatControllerMock->stringRepeatFormSubmit($this->stringRepeatRequestMock)
+        );
     }
 
 }

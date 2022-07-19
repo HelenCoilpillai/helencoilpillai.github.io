@@ -69,5 +69,4 @@ class StringEndController extends Controller
     {
         return redirect();
     }
-
 }

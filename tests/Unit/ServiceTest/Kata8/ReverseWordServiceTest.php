@@ -21,7 +21,6 @@ class ReverseWordServiceTest extends TestCase
 
     public function setUp(): void
     {
-
     }
 
     public function tearDown(): void
@@ -44,6 +43,5 @@ class ReverseWordServiceTest extends TestCase
         $reverseWordService = new ReverseWordService();
 
         $this->assertSame($reversedText, $reverseWordService->reverseWords($textToBeReversed));
-
     }
 }

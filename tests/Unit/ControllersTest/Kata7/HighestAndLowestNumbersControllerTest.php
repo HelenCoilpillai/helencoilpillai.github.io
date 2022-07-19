@@ -88,7 +88,10 @@ class HighestAndLowestNumbersControllerTest extends TestCase
             ->withArgs(['message', $highestAndLowestNumbers])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
-            $this->highestAndLowestNumbersControllerMock->highestAndLowestNumbersFormSubmit($this->highestAndLowestNumbersRequestMock));
+        $this->assertSame(
+            $this->redirectResponseMock,
+            $this->highestAndLowestNumbersControllerMock
+                ->highestAndLowestNumbersFormSubmit($this->highestAndLowestNumbersRequestMock)
+        );
     }
 }

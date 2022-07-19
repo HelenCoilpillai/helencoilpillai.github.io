@@ -21,7 +21,6 @@ class StringRepeatServiceTest extends TestCase
 
     public function setUp(): void
     {
-
     }
 
     public function tearDown(): void

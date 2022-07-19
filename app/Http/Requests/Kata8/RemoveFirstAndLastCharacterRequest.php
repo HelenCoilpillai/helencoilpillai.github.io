@@ -27,5 +27,4 @@ class RemoveFirstAndLastCharacterRequest extends FormRequest
             'input' => ['required', 'max:20']
         ];
     }
-
 }

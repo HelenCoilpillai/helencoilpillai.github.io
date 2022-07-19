@@ -21,7 +21,6 @@ class HighestAndLowestNumbersServiceTest extends TestCase
 
     public function setUp(): void
     {
-
     }
 
     public function tearDown(): void
@@ -44,5 +43,4 @@ class HighestAndLowestNumbersServiceTest extends TestCase
 
         $this->assertSame($highestAndLowestNumbers, $highestAndLowestNumbersService->findHighestAndLowestNumbers($inputNumbers));
     }
-
 }

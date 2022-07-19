@@ -20,7 +20,6 @@ class RemoveFirstAndLastCharacterServiceTest extends TestCase
 
     public function setUp(): void
     {
-
     }
 
     public function tearDown(): void
@@ -39,8 +38,10 @@ class RemoveFirstAndLastCharacterServiceTest extends TestCase
     {
         $removeFirstAndLastCharacterService = new RemoveFirstAndLastCharacterService();
 
-        $this->assertEquals('nit Testin',
-            $removeFirstAndLastCharacterService->removeFirstAndLastCharacter('Unit Testing'));
+        $this->assertEquals(
+            'nit Testin',
+            $removeFirstAndLastCharacterService->removeFirstAndLastCharacter('Unit Testing')
+        );
     }
 
     /**

@@ -12,6 +12,5 @@ class StringRepeatService
     public function repeatString(string $inputString, int $repeatTimes): string
     {
         return str_repeat($inputString, $repeatTimes);
-
     }
 }

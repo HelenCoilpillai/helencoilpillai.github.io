@@ -13,5 +13,4 @@ class HighestAndLowestNumbersService
         $numbersArray = explode(" ", $numbers);
         return "Highest: " . max($numbersArray) . " Lowest: " . min($numbersArray);
     }
-
 }

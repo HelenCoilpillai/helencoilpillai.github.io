@@ -12,4 +12,3 @@ class TheWideMouthFrogService
         return 'wide';
     }
 }
-

@@ -8,7 +8,6 @@ use App\Service\Kata7\HighestAndLowestNumbersService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 
-
 class HighestAndLowestNumbersController extends Controller
 {
     /**
