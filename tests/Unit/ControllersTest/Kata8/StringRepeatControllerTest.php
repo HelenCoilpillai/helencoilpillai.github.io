@@ -20,7 +20,6 @@ use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
 
-
 class StringRepeatControllerTest extends TestCase
 {
     private $redirectResponseMock;
@@ -42,7 +41,6 @@ class StringRepeatControllerTest extends TestCase
         $this->stringRepeatRequestMock = Mockery::mock(StringRepeatRequest::class);
 
         $this->stringRepeatServiceMock = Mockery::mock(StringRepeatService::class);
-
     }
 
     public function tearDown(): void
@@ -102,5 +100,4 @@ class StringRepeatControllerTest extends TestCase
             $this->stringRepeatControllerMock->stringRepeatFormSubmit($this->stringRepeatRequestMock)
         );
     }
-
 }

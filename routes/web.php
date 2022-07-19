@@ -96,4 +96,3 @@ Route::get('/string-end-result-history', function () {
 });
 
 Route::get('/string-end-result-history', [StringEndController::class, 'index']);
-

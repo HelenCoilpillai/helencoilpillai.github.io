@@ -41,7 +41,6 @@ class HighestAndLowestNumbersControllerTest extends TestCase
         $this->highestAndLowestNumberServiceMock = Mockery::mock(HighestAndLowestNumbersService::class);
 
         $this->redirectorMock = Mockery::mock(Redirector::class);
-
     }
 
     public function tearDown(): void

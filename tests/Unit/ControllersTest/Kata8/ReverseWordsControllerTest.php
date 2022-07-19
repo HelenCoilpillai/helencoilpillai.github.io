@@ -88,7 +88,9 @@ class ReverseWordsControllerTest extends TestCase
             ->withArgs(['message', "This is the reversed text: {$reversedText}"])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
-            $this->reverseWordsControllerMock->reverseWordsFormSubmit($this->reverseWordRequestMock));
+        $this->assertSame(
+            $this->redirectResponseMock,
+            $this->reverseWordsControllerMock->reverseWordsFormSubmit($this->reverseWordRequestMock)
+        );
     }
 }

@@ -42,7 +42,6 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
         $this->removeFirstAndLastCharacterServiceMock = Mockery::mock(RemoveFirstAndLastCharacterService::class);
 
         $this->redirectorMock = Mockery::mock(Redirector::class);
-
     }
 
     public function tearDown(): void
