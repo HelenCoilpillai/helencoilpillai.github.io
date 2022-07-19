@@ -38,7 +38,6 @@ class StringRepeatController extends Controller
         return $this->getRedirectObject()
             ->back()
             ->with("specialMessage", $formattedRepeatedString);
-
     }
 
     /**

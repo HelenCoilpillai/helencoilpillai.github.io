@@ -51,17 +51,20 @@ Route::get('/remove-first-and-last-character', function () {
     return view('../kata8/removeFirstAndLastCharacter');
 });
 
-Route::post('/remove-first-and-last-character/submit',
-    'App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit')
+Route::post(
+    '/remove-first-and-last-character/submit',
+    'App\Http\Controllers\Kata8\RemoveFirstAndLastCharacterController@removeFirstAndLastCharacterFormSubmit'
+)
     ->name('remove-first-and-last-character-form-submit');
-
 
 Route::get('/string-repeat', function () {
     return view('../kata8/stringRepeat');
 });
 
-Route::post('/string-repeat/submit',
-    'App\Http\Controllers\Kata8\StringRepeatController@stringRepeatFormSubmit')
+Route::post(
+    '/string-repeat/submit',
+    'App\Http\Controllers\Kata8\StringRepeatController@stringRepeatFormSubmit'
+)
     ->name('string-repeat-form-submit');
 
 Route::get('/kata7', function () {
@@ -72,16 +75,20 @@ Route::get('/highest-and-lowest', function () {
     return view('../kata7/highestAndLowestNumbers');
 });
 
-Route::post('/highest-and-lowest/submit',
-    'App\Http\Controllers\Kata7\HighestAndLowestNumbersController@highestAndLowestNumbersFormSubmit')
+Route::post(
+    '/highest-and-lowest/submit',
+    'App\Http\Controllers\Kata7\HighestAndLowestNumbersController@highestAndLowestNumbersFormSubmit'
+)
     ->name('highest-and-lowest-form-submit');
 
 Route::get('/string-end', function () {
     return view('../kata7/stringEnd');
 });
 
-Route::post('/string-end/submit',
-    'App\Http\Controllers\Kata7\StringEndController@stringEndFormSubmit')
+Route::post(
+    '/string-end/submit',
+    'App\Http\Controllers\Kata7\StringEndController@stringEndFormSubmit'
+)
     ->name('string-end-form-submit');
 
 Route::get('/string-end-result-history', function () {
@@ -89,4 +96,3 @@ Route::get('/string-end-result-history', function () {
 });
 
 Route::get('/string-end-result-history', [StringEndController::class, 'index']);
-

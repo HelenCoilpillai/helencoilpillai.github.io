@@ -41,7 +41,6 @@ class HighestAndLowestNumbersControllerTest extends TestCase
         $this->highestAndLowestNumberServiceMock = Mockery::mock(HighestAndLowestNumbersService::class);
 
         $this->redirectorMock = Mockery::mock(Redirector::class);
-
     }
 
     public function tearDown(): void
@@ -88,7 +87,10 @@ class HighestAndLowestNumbersControllerTest extends TestCase
             ->withArgs(['message', $highestAndLowestNumbers])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
-            $this->highestAndLowestNumbersControllerMock->highestAndLowestNumbersFormSubmit($this->highestAndLowestNumbersRequestMock));
+        $this->assertSame(
+            $this->redirectResponseMock,
+            $this->highestAndLowestNumbersControllerMock
+                ->highestAndLowestNumbersFormSubmit($this->highestAndLowestNumbersRequestMock)
+        );
     }
 }

@@ -42,7 +42,6 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
         $this->removeFirstAndLastCharacterServiceMock = Mockery::mock(RemoveFirstAndLastCharacterService::class);
 
         $this->redirectorMock = Mockery::mock(Redirector::class);
-
     }
 
     public function tearDown(): void
@@ -89,8 +88,10 @@ class RemoveFirstAndLastCharacterControllerTest extends TestCase
             ->withArgs(["message", "The first & last characters have been removed: {$modifiedString}"])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
+        $this->assertSame(
+            $this->redirectResponseMock,
             $this->removeFirstAndLastCharacterControllerMock
-                ->removeFirstAndLastCharacterFormSubmit($this->removeFirstAndLastCharacterRequestMock));
+                ->removeFirstAndLastCharacterFormSubmit($this->removeFirstAndLastCharacterRequestMock)
+        );
     }
 }

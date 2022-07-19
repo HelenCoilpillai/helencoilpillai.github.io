@@ -95,7 +95,9 @@ class stringEndControllerTest extends TestCase
             ->withArgs(["specialMessage", $specialMessageString])
             ->andReturnSelf();
 
-        $this->assertSame($this->redirectResponseMock,
-            $this->stringEndControllerMock->stringEndFormSubmit($this->stringEndRequestMock));
+        $this->assertSame(
+            $this->redirectResponseMock,
+            $this->stringEndControllerMock->stringEndFormSubmit($this->stringEndRequestMock)
+        );
     }
 }
