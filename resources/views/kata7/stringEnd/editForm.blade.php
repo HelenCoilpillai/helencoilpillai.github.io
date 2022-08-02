@@ -1,20 +1,20 @@
-@extends('.layout.app')
+@extends('layout.app')
 
 @section('title')
-    String End
+    String End - Update
 @endsection
 
 @section('headerTitle')
-    String End
+    String End - Update
 @endsection
 
 @section('body')
     @component('layout.components.form')
         @slot('action')
-            {{route('string-end-form-submit')}}
+            {{ route('string-end-edit-form-submit', $stringEndResults['id']) }}
         @endslot
         @slot('formId')
-            stringEndForm
+            stringEndEditForm
         @endslot
 
         @slot('formContent')
@@ -39,7 +39,7 @@
                         text
                     @endslot
                     @slot('value')
-                        {{ old('text', isset($name->text) ?? '') }}
+                        {{ $stringEndResults['text'] }}
                     @endslot
                 @endcomponent
             </div>
@@ -70,7 +70,7 @@
                         text
                     @endslot
                     @slot('value')
-                        {{ old('text_ending', isset($name->text_ending) ?? '') }}
+                        {{ $stringEndResults['text_ending'] }}
                     @endslot
                 @endcomponent
             </div>
@@ -89,7 +89,7 @@
                         backBtnStringEnd
                     @endslot
                     @slot('buttonContent')
-                        <a class="stretched-link" href="../kata7">
+                        <a class="stretched-link" href="../../string-end-result-history">
                             Back
                         </a>
                     @endslot
@@ -103,10 +103,10 @@
                         col-md-1  btn btn-primary inline-button ml-md-3
                     @endslot
                     @slot('buttonId')
-                        submitBtnStringEnd
+                        updateBtnStringEnd
                     @endslot
                     @slot('buttonContent')
-                        Submit
+                        Update
                     @endslot
                 @endcomponent
             </div>

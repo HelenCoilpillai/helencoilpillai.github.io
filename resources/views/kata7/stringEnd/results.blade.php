@@ -1,4 +1,4 @@
-@extends('.layout.app')
+@extends('layout.app')
 
 @section('title')
     Results - String End
@@ -17,6 +17,7 @@
             @slot('tableHeader')
                 <th>Text</th>
                 <th>Text Ending</th>
+                <th></th>
             @endslot
             @slot('tableBody')
 
@@ -24,6 +25,11 @@
                     <tr>
                         <td>{{ $stringEndResult['text'] }}</td>
                         <td>{{ $stringEndResult['text_ending'] }}</td>
+                        <td>
+                            <a href="/string-end/{{ $stringEndResult['id'] }}/edit">
+                                <span class="btn"><i class="fa fa-edit"></i></span>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             @endslot
