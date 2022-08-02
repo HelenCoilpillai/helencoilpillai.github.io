@@ -90,6 +90,7 @@ class StringEndController extends Controller
     }
 
     /**
+     * @codeCoverageIgnore
      * @param $redirectPath
      * @return Redirector|RedirectResponse
      */
