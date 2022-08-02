@@ -82,7 +82,7 @@ Route::post(
     ->name('highest-and-lowest-form-submit');
 
 Route::get('/string-end', function () {
-    return view('../kata7/stringEnd');
+    return view('../kata7/stringEnd/kataForm');
 });
 
 Route::post(
@@ -92,7 +92,12 @@ Route::post(
     ->name('string-end-form-submit');
 
 Route::get('/string-end-result-history', function () {
-    return view('../kata7/historyResults/stringEndResults');
+    return view('../kata7/stringEnd/results');
 });
 
 Route::get('/string-end-result-history', [StringEndController::class, 'index']);
+
+Route::get('/string-end/{id}/edit', [StringEndController::class, 'edit']);
+
+Route::post('/string-end/{id}/edit', [StringEndController::class, 'update'])
+    ->name('string-end-edit-form-submit');
