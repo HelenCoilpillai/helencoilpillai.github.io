@@ -86,7 +86,7 @@ class StringEndController extends Controller
         return $this->getRedirectObject()
             ->back()
             ->with('message', $messageString)
-            ->with('specialMessage', "The input values have been saved!");
+            ->with('specialMessage', "The 'String End' values have been saved!");
     }
 
     /**
